@@ -1,0 +1,31 @@
+{% extends 'shop/basic.html' %}
+
+{% block css %}
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'shop/contact.css' %}">
+
+{% endblock %}
+{% block body %}
+
+
+<div class="contact-section">
+
+  <br>
+  <br>
+  <h1>Contact Us</h1> <br>
+    <h1> Feel Free To message Us</h1>
+    <form class="contact-form" action="/shop/contact/" method="post">{% csrf_token %}
+
+        <input type="text" class="contact-form-text" placeholder="Your name" id="name" name="name" required>
+         <input type="email" class="contact-form-text" placeholder="Your email" id="email" name="email" required>
+        <input type="text" class="contact-form-text" placeholder="Your phone" id="phone" name="mobile" required>
+        <textarea class="contact-form-text" placeholder="How May We Help You? Please Write to your message here!!" id="desc" name="desc" required></textarea>
+        <button type = "submit" class="contact-form-btn">Submit</button>
+
+  </form>
+</div>
+
+
+  </body>
+</html>
+{% endblock %}
