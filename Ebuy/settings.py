@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*%068p4efv#66hw_dgvik+dwj^mhg3@hwq9#kc1-^)z++q*2s0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  #Before hosting site we must disable DEBUG Option
+DEBUG = False #Before hosting site we must disable DEBUG Option
 
 ALLOWED_HOSTS = ['*'] # make allow host ALLOWED_HOSTS = [] to all
 
@@ -31,7 +31,8 @@ ALLOWED_HOSTS = ['*'] # make allow host ALLOWED_HOSTS = [] to all
 # Application definition
 
 INSTALLED_APPS = [
-    'shop.apps.ShopConfig',
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'shop.apps.ShopConfig',
 
 ]
 
@@ -126,3 +128,35 @@ MEDIA_URL = "/media/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+JET_THEMES = [
+    {
+        'theme': 'default', # theme folder name
+        'color': '#47bac1', # color of the theme's button in user menu
+        'title': 'Default' # theme title
+    },
+    {
+        'theme': 'green',
+        'color': '#44b78b',
+        'title': 'Green'
+    },
+    {
+        'theme': 'light-green',
+        'color': '#2faa60',
+        'title': 'Light Green'
+    },
+    {
+        'theme': 'light-violet',
+        'color': '#a464c4',
+        'title': 'Light Violet'
+    },
+    {
+        'theme': 'light-blue',
+        'color': '#5EADDE',
+        'title': 'Light Blue'
+    },
+    {
+        'theme': 'light-gray',
+        'color': '#222',
+        'title': 'Light Gray'
+    }
+]

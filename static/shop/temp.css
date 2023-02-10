@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.small-container{
+    max-width:1000px;
+    margin: 0;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+.row{
+    margin: 10vh 5vw 5vh 5vw;
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows:  7fr ;
+    grid-template-areas: "Product_img Product_details";
+}
+
+.single-product .col-2 img{
+    margin: 5vh 5vw 5vh 10vw;
+    width: 25vw;
+    height: auto;
+    max-height: 65vh;
+    padding: 0;
+}
+.Product_details{
+        margin: 2vh 8vw 5vh 2vw;
+}
+.description{
+            padding: 25px;
+            width: 32vw;
+            height: 320px;
+            overflow: auto;
+         }
+.single-product .col-2{
+    padding: 35px;
+}
+.col-2{
+    flex-basis: 20%;
+    min-width: 300px;
+}
+.col-2 h2{
+    padding: 0.5px;
+    width: 37vw;
+    font-size: 40px;
+    line-height: 50px;
+    margin: 25px 30px;
+}
+h5{
+    width: 35vw;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 25px 30px;
+}
+.single-product h4 b i{
+    margin: 20px 40px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin: 5px 40px;
+    border: 1px solid #ff523b;
+}
+.single-product .fa{
+    color: #ff523b;
+    margin-left: 10px
+}
+.single-product:focus{
+    outline: none;
+}
+p{
+    color: #555;
+}
+.button{
+  min-width: 40vw;
+}
+.buttonIn{
+    width: 170px;
+    height: auto;
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 20px;
+    margin: 15px 40px;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+buttonIn:hover{
+    background: #563434;
+}

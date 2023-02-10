@@ -20,10 +20,13 @@ from django.conf.urls.static import static
 # from . import views
 
 urlpatterns = [
-    path('noadmin/', admin.site.urls),
+    path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
+    path('admin/', admin.site.urls),
     # path('', views.index,name='Home'),
     path('blog/', include("blog.urls")),
     path('', include("shop.urls")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# Ebuy.wsgi:application
