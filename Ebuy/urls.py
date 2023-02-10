@@ -27,6 +27,7 @@ urlpatterns = [
     path('blog/', include("blog.urls")),
     path('', include("shop.urls")),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Ebuy.wsgi:application
